@@ -40,7 +40,7 @@ def write_xml_to_file(file, imglist):
         <to>{0}</to>
     </transition>
     <static>
-        <duration>5</duration>
+        <duration>1795.0</duration>
         <file>{0}</file>
     </static>
     <transition>
