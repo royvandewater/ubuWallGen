@@ -10,14 +10,18 @@ def main(argv):
         if is_image(item):
             imglist.append("{0}/{1}".format(os.getcwd(), item))
     file = open('desktop.xml', 'w')
-    write_xml_to_file(file, imglist)
+    if(len(imglist)):
+        if len(argv):
+            write_xml_to_file(file, imglist, int(argv[0]))
+        else:
+            write_xml_to_file(file, imglist, 1795)
     file.close()
 
 def is_image(filename):
     """ Returns true if file extension in jpg, png or gif """
     return filename.endswith((".jpg", ".png", ".gif",))
 
-def write_xml_to_file(file, imglist):
+def write_xml_to_file(file, imglist, interval):
     """ Generates xml and writes it to the file passed as argument """
     file.write(
 """<background>
@@ -29,23 +33,23 @@ def write_xml_to_file(file, imglist):
     </starttime>""")
     file.write("""
     <static>
-        <duration>1795.0</duration>
+        <duration>{1}</duration>
         <file>{0}</file>
     </static>
     <transition>
         <duration>5</duration>
-        <from>{0}></from>""".format(imglist[0]))
-    for img in imglist:
+        <from>{0}></from>""".format(imglist[0], interval))
+    for img in imglist[1:]:
         file.write("""
         <to>{0}</to>
     </transition>
     <static>
-        <duration>1795.0</duration>
+        <duration>{1}</duration>
         <file>{0}</file>
     </static>
     <transition>
         <duration>5</duration>
-        <from>{0}></from>""".format(img))
+        <from>{0}></from>""".format(img, interval))
     file.write("""
         <to>{0}</to>
     </transition>
