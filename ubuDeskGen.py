@@ -3,6 +3,7 @@ import sys
 import os
 
 def main(argv):
+    """ Generate xml file of files in dir fr ubuntu desktop wallpaper """
     pass
 
 if __name__ == "__main__":
