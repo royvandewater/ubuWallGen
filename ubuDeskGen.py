@@ -24,13 +24,7 @@ def is_image(filename):
 def write_xml_to_file(file, imglist, interval):
     """ Generates xml and writes it to the file passed as argument """
     file.write(
-"""<background>
-    <starttime>
-        <year>2009</year>
-        <month>12</month>
-        <day>21</day>
-        <minute>00</minute>
-    </starttime>""")
+"""<background>""")
     file.write("""
     <static>
         <duration>{1}</duration>
