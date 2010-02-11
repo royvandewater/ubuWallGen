@@ -19,7 +19,7 @@ def main(argv):
 
 def is_image(filename):
     """ Returns true if file extension in jpg, png or gif """
-    return filename.endswith((".jpg", ".png", ".gif",))
+    return filename.endswith((".jpg", ".png", ".gif",".jpeg"))
 
 def write_xml_to_file(file, imglist, interval):
     """ Generates xml and writes it to the file passed as argument """
