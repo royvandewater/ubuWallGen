@@ -1,0 +1,8 @@
+To generate xml wallpaper slideshow file, simply run ubuWallGen.py from the directory where your pictures are stored.
+
+Optionally, you can add ubuWallGen to your path so you don't have to enter the full filepath each time.
+
+ubuWallGen has a single optional argument, which is the wallpaper cycle time in seconds.
+If your wallpaper to switch every 5 minutes, simply run "./ubuWallGen.py 300" from the directory where your images are stored.
+
+Omitting the argument defaults the cycle time to 30 minutes.
