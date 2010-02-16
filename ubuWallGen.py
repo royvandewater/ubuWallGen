@@ -32,7 +32,7 @@ def write_xml_to_file(file, imglist, interval):
     </static>
     <transition>
         <duration>5</duration>
-        <from>{0}></from>""".format(imglist[0], interval))
+        <from>{0}</from>""".format(imglist[0], interval))
     for img in imglist[1:]:
         file.write("""
         <to>{0}</to>
